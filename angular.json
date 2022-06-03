@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "leadsystem"
+  "defaultProject": "leadsystem",
+  "cli": {
+    "analytics": false
+  }
 }

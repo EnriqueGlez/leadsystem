@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+/*********
+* import bootstrap icons
+************/
+@import "~boostrap-icons/font/bootstrap-icons-css";
+/*************
+*  css globals
+*************/
+body {
+    background-color: #fff;
+}
+
+i {
+    cursor: pointer;
+}
+/*
+* text aling
+*/
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+/*
+* border
+*/
+.b-0 {
+    border: 0;
+}
+/**
+* padding
+*/
+
+.p-10  {
+    padding: 10px;
+}
+.p-20  {
+    padding: 20px;
+}
+.p-30  {
+    padding: 30px;
+}
+/*
+*  margin left
+*/
+.ml-10 {
+    margin-left: 10px;
+}
+/*
+*  margin bottom
+*/
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+/*
+*  margin top
+*/
+.mt-10 {
+    margin-bottom: 10px;
+}
+.mt-20 {
+    margin-bottom: 20px;
+}
+.mt-30 {
+    margin-bottom: 23px;
+}
+.mt-40 {
+    margin-bottom: 40px;
+}
+
+/*
+* width
+*/
+.w-60 {
+    width: 60px;
+}
+.w-120 {
+    width: 120px;
+}
+.w-200 {
+    width: 200px;
+}
+.w-300 {
+    width: 300px;
+}
+/*
+* padding
+*/
+.p-0 {
+    padding: 0;
+}
+.pt-0 {
+    padding-top: 0;
+}
+.pr-0 {
+    padding-right: 0;
+}
+.pb-0 {
+    padding-bottom: 0;
+}
+.pl-0 {
+    padding-left: 0;
+}
+/*
+* scrollbar
+*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+    width: 6px !important;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #e4e4e4;
+    position: absolute;
+    height: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #e4e4e4;
+}
+
