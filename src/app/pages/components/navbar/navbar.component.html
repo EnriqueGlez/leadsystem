@@ -1,26 +1,20 @@
 <div class="row">
-    <div class="col-8 col-menu p-0">
-        <ul ngbNav #nav="ngNav" [(activeId)="active" class="nav-tabs"> 
-            <li [ngbNavItem]="1">
-                <a class="pl-0" ngbNavLink>
-                    <i class="bi bi-table"></i>
-                    <span class="ml-10">
-                        Tabla principal
-                    </span>
-                </a>
-                <ng-template ngbNavContent> 
-                </ng-template>
-            </li>
-            <li [ngbNavItem]="2">
-                <a class="pl-0" ngbNavLink>
-                    <i class="bi bi-table"></i>
-                    <span class="ml-10">
-                        Tabla principal
-                    </span>
-                </a>
-                <ng-template ngbNavContent> 
-                </ng-template>
-            </li>
-        </ul>
-    </div>
+  <div class="col-8 col-menu p-0">
+    <ul ngbNav #nav="ngbNav" [(activeId)="active" class="nav-tabs">
+      <li [ngbNavItem]="1">
+        <a class="pl-0" ngbNavLink>
+          <i class="bi bi-table"></i>
+          <span class="ml-10"> Tabla principal </span>
+        </a>
+        <ng-template ngbNavContent> </ng-template>
+      </li>
+      <li [ngbNavItem]="2">
+        <a class="pl-0" ngbNavLink>
+          <i class="bi bi-table"></i>
+          <span class="ml-10"> Tabla principal </span>
+        </a>
+        <ng-template ngbNavContent> </ng-template>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,92 +1,91 @@
 <!-- table responsive -->
-<div class="table-responsive m-0"> 
-    <table class="tablle mt-30">
+<div class="table-responsive m-0" *ngIf="dataTable">
+  <table class="tablle mt-30">
+    <!-- table -->
+    <table class="table">
+      <caption></caption>
 
-        <!-- table -->
-        <table class="table">
-            <caption></caption>
+      <!-- thead -->
+      <thead class="b-0">
+        <tr class="b-0">
+          <th
+            class="th-description"
+            scope="col"
+            [ngStyle]="{ color: dataTable.color }"
+          >
+            {{ dataTable.title }}
+          </th>
+          <th class="th-description text-center" scope="col">Resp</th>
+          <th class="th-description text-center" scope="col">Estado</th>
+          <th class="th-description text-center" scope="col">Cronograma</th>
+          <th class="th-description text-center" scope="col">Vence</th>
+          <th class="th-description text-center" scope="col">Prioridad</th>
+          <th class="th-description text-center" scope="col">
+            <i class="bi bi-plus-circle-fill"></i>
+          </th>
+        </tr>
+      </thead>
+      <!-- ./thead -->
 
-            <!-- thead -->
-            <thead class="b-0">
-                <tr class="b-0">
-                    <th class="th-description" scope="col" [ngStyle]="{ 'color': dataTable.color }">
-                        {{ dataTable.title }}
-                    </th>
-                    <th class="th-description text-center" scope="col">
-                        Resp
-                    </th>
-                    <th class="th-description text-center" scope="col">
-                        Estado
-                    </th>
-                    <th class="th-description text-center" scope="col">
-                        Cronograma
-                    </th>
-                    <th class="th-description text-center" scope="col">
-                        Vence
-                    </th>
-                    <th class="th-description text-center" scope="col">
-                        Prioridad
-                    </th>
-                    <th class="th-description text-center" scope="col">
-                        <i class="bi bi-plus-circle-fill"></i>
-                    </th>
-                </tr>
-            </thead>
-            <!-- ./thead -->
-       
-            <!-- tbody -->
-            <tbody class="b-0" *ngFor="let data of dataTable.tableData">
-                <tr class="b-0">
-                    <th scope="row" class="td-app w-300">
-                        <div class="div-td div-td-des" [ngStyle]="{ 'border-left': '3px solid ' + dataTable-color }">
-                            <span class="ml-10">
-                                {{ data.description }}
-                            </span>
-                        </div>
-                    </th>
-                    <td class="td-app w-60">
-                        <div class="div-td text-center">
-                            <img [src]="'assets/img/' + data.img" alt="Avatar" class="avatar">
-                        </div>
-                    </td>
-                    <td class="td-app w-120">
-                        <div class="div-td text-center" [ngStyle]="{ 'background-color': data.color, 'color': '#fff'}">
-                            {{ data.status }}                            
-                        </div>
-                    </td>
-                    <td class="td-app w-200">
-                        <div class="div-td text-center">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" arial-valuenow="70" arial-valuemax="100" [ngStyle]="{ 'width': data.percent + '%'}">
-                                    <span class="sr-only">{{ data.percent}}% Complete</span>                      
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="td-app">
-                        <div class="div-td text-center">
-                            {{ date.endDate | date: 'MMMM d' }}
-                        </div>
-                    </td>
-                    <td class="td-app">
-                        <div class="div-td text-center">
-                            <span class="fa fa-start checked"></span>
-                            <span class="fa fa-start checked"></span>
-                            <span class="fa fa-start checked"></span>
-                            <span class="fa fa-start"></span>
-                            <span class="fa fa-start"></span>
-                        </div>
-                    </td>
-                    <td class="td-app">
-                        <div class="div-td text-center">
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-            <!-- ./tbody -->
-            
-        </table>
-        <!-- ./table -->
+      <!-- tbody -->
+      <tbody class="b-0" *ngFor="let data of dataTable.tableData">
+        <tr class="b-0">
+          <th scope="row" class="td-app w-300">
+            <div
+              class="div-td div-td-des"
+              [ngStyle]="{ 'border-left': '3px solid ' + dataTable.color }"
+            >
+              <span class="ml-10">
+                {{ data.description }}
+              </span>
+            </div>
+          </th>
+          <td class="td-app w-60">
+            <div class="div-td text-center">
+              <img [src]="data.img" alt="Avatar" class="avatar" />
+            </div>
+          </td>
+          <td class="td-app w-120">
+            <div
+              class="div-td text-center"
+              [ngStyle]="{ 'background-color': data.color, color: '#fff' }"
+            >
+              {{ data.status }}
+            </div>
+          </td>
+          <td class="td-app w-200">
+            <div class="div-td text-center">
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+              <span class="sr-only">70% Complete</span>
+            </div>
+          </div>
+          
+            </div>
+          </td>
+          <td class="td-app">
+            <div class="div-td text-center">
+              {{ data.endDate | date: 'LLL d' }}
+            </div>
+          </td>
+          <td class="td-app">
+            <div class="div-td text-center">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </td>
+          <td class="td-app">
+            <div class="div-td text-center"></div>
+          </td>
+        </tr>
+      </tbody>
+      <!-- ./tbody -->
     </table>
+    <!-- ./table -->
+  </table>
 </div>
 <!-- ./table responsive -->

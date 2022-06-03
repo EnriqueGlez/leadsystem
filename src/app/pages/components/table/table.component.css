@@ -2,62 +2,62 @@
 * table css
 */
 .table {
-    margin: 0;
-    min-width: 1000px;
+  margin: 0;
+  min-width: 1000px;
 }
-.table>:not(caption)>*>* {
-    border: 0;
+.table > :not(caption) > * > * {
+  border: 0;
 }
 th {
-    padding: 0;
+  padding: 0;
 }
 .th-desciption {
-    font-size: 16px;
-    font-weight: normal;
-    padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0;
 }
 
 /*
 * td
 */
 .td-app {
-    border: 0 !important;
-    background-color: #fff !important;
-    padding: 2px 10px 2px 0 !important;
+  border: 0 !important;
+  background-color: #fff !important;
+  padding: 2px 10px 2px 0 !important;
 }
 .div-td {
-    align-items: center;
-    background: #f7f7f7;
-    display: flex;
-    font-size: 14px;
-    font-weight: normal;
-    height: 40px;
-    justify-content: center;
-    margin: auto;
-    vertical-align: middle;
+  align-items: center;
+  background: #f7f7f7;
+  display: flex;
+  font-size: 14px;
+  font-weight: normal;
+  height: 40px;
+  justify-content: center;
+  margin: auto;
+  vertical-align: middle;
 }
 .div-td-des {
-    justify-content: initial;
+  justify-content: initial;
 }
 /*
 * progress
 */
 .progress {
-    width: 160px;
-    --bs-progress-bar-bg: #438fff;
+  width: 160px;
+  --bs-progress-bar-bg: #438fff;
 }
 /*
 * avatar
 */
 .avatar {
-    border-radius: 50%;
-    height: 30px;
-    margin-top: 5px;
-    width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  margin-top: 5px;
+  width: 30px;
 }
 /*
 * star when is checked
 */
-.cheked {
-    color: #ffaa0f;
+.checked {
+  color: #ffaa0f;
 }
